@@ -5,20 +5,15 @@
                 enabled: true,
                 requireBase: false
          });
-      $stateProvider
+        $stateProvider
             .state('home', {
                 url: '/',
                 controller: 'HomeCtrl as home',
-                templateUrl: '/template/home.html',
-         })
-            .state('rooms', {
-                url: '/rooms',
-                controller: 'RoomCtrl as rooms',
-                templateUrl: '/template/rooms.html'
+                templateUrl: '/template/home.html'
 
          });
      }
       angular
-         .module('blocChat', ['ui.router'])
+         .module('blocChat', ['ui.router', 'firebase'])
          .config(config);
  })();
